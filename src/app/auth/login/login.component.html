@@ -1,0 +1,58 @@
+<div class="flex">
+  <div class="m-auto">
+    <mat-card class="contenedorlogin" style="display: flex; flex-direction: column; align-items: center;">
+      <mat-card-title style="color: white;">Login Here</mat-card-title>
+      <mat-card-subtitle style="color: white;">Enter your email and password to login.</mat-card-subtitle>
+      <mat-card-content class="form-container">
+        <form action="">
+          <mat-form-field>
+            <mat-label>Email</mat-label>
+            <p>Email</p>
+            <input matInput type="email" placeholder="Enter your email" required email />
+            
+            <mat-error>Invalid email address</mat-error>
+          </mat-form-field>
+
+          <mat-form-field class="contra">
+            <mat-label>Password</mat-label>
+            <p>Password</p>
+            <input matInput type="password" placeholder="Enter your password" required minlength="6" />
+            <mat-error>Password must be at least 6 characters long</mat-error>
+          </mat-form-field>
+        </form>
+      </mat-card-content>
+
+      <mat-divider></mat-divider>
+
+      <mat-card-actions>
+        <button (click)="login()" color="accent" type="submit" mat-raised-button>
+          <mat-spinner *ngIf="isLoading" diameter="20"></mat-spinner>
+          <span *ngIf="!isLoading"> Login </span>
+        </button>
+      </mat-card-actions> 
+
+     
+      <mat-card-actions>
+        <button class="loginn" color="primary" mat-button>Forgot password</button>
+      </mat-card-actions>
+
+      <mat-card-actions>
+        <span>Don't Have an account? </span>
+        <button color="primary" mat-button (click)="goToRegister()">Signup</button>
+      </mat-card-actions>
+
+      <mat-card-actions>
+        <button color="accent" type="submit" mat-raised-button>
+          <span>Facebook</span>
+          <mat-icon>facebook</mat-icon>
+        </button>
+
+        <button color="accent" type="submit" mat-raised-button>
+          <span>Google</span>
+          <mat-icon>google</mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+

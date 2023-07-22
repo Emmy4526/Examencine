@@ -1,0 +1,39 @@
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  
+    .register-card {
+      width: 400px;
+      text-align: center;
+      padding: 40px;
+    }
+    
+    .contenedorlogin {
+        margin: auto;
+        margin-bottom: 150px;
+        padding: 40px ;
+        width: 150%;
+        background-color:rgb(198, 198, 228);
+        text-align: center;
+      }
+      
+    .mat-form-field {
+      margin-bottom: 20px;
+    }
+  
+    .mat-card-actions {
+      display: flex;
+      justify-content: space-between;
+  
+      button {
+        margin: 10px;
+      }
+    }
+  }
+  .grid-colt1{
+    display: grid;
+    grid-template-columns: 1,1rem;
+  }
+  

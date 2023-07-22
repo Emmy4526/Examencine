@@ -1,0 +1,37 @@
+<h1>Usuarios Registrados</h1>
+
+<mat-table [dataSource]="dataSource">
+
+  <ng-container matColumnDef="gender">
+    <mat-header-cell *matHeaderCellDef> Género </mat-header-cell>
+    <mat-cell *matCellDef="let user"> {{ user.gender }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef> Nombre </mat-header-cell>
+    <mat-cell *matCellDef="let user"> {{ user.name }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="email">
+    <mat-header-cell *matHeaderCellDef> Email </mat-header-cell>
+    <mat-cell *matCellDef="let user"> {{ user.email }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="login">
+    <mat-header-cell *matHeaderCellDef> Usuario </mat-header-cell>
+    <mat-cell *matCellDef="let user"> {{ user.login }} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="picture">
+    <mat-header-cell *matHeaderCellDef> Imagen </mat-header-cell>
+    <mat-cell *matCellDef="let user"> 
+      <img [src]="user.picture" alt="Imagen de usuario">
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+
+</mat-table>
+
+<mat-paginator [length]="dataSource.data.length" [pageSize]="pageSize" [pageSizeOptions]="[10, 20, 50]"></mat-paginator>

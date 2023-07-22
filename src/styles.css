@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.flex {
+    display: flex ;
+}
+
+.justify-content-between {
+    justify-content: space-between ;
+}
+
+.m-auto{
+   margin: auto; 
+}
+
+  /* Estilos personalizados */
+  .contenedorlogin {
+    background-color: #cfe1f9; /* Azul pastel */
+    text-align: center;
+    padding: 20px;
+  }
+
+  .forgot-password,
+  .dont-have-account {
+    display: block;
+    margin: 10px auto;
+  }
+
+  .facebook-button,
+  .google-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #3b5998; /* Azul de Facebook */
+    color: #ffffff; /* Texto en blanco */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 5px;
+  }
+
+

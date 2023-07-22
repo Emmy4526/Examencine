@@ -1,0 +1,10 @@
+<h1> All clients</h1>
+
+<table mat-table [dataSource]="dataSource" >
+    <mat-text-column name="position"></mat-text-column>
+    <mat-text-column name="name"></mat-text-column>
+    <mat-text-column name="weight"></mat-text-column>
+    <mat-text-column name="symbol"></mat-text-column>
+    <tr mat-header-row *matHeaderRowDef=" displayedColumns;"></tr>
+<tr mat-row *matRowDef="let rowData; columns: displayedColumns"></tr>
+</table> 

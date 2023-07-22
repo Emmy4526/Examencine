@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Ajusta la altura según tus necesidades */
+  padding: 20px; /* Ajusta el espaciado interior según tus necesidades */
+}
+
+.centered-image {
+  display: block;
+  margin: 0 auto;
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 16px;
+    color: black;
+  }
+  
+  mat-card {
+    width: 400px;
+    margin: 10px;
+    background-color: black;
+  }
+
+  .example-card{
+    font-size: 15px;
+    color: white;
+  }
+  
+  .description {
+    font-size: 12px;
+    color:white;
+  }
+  
+  mat-card-image img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+

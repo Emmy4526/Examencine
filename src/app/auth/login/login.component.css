@@ -1,0 +1,52 @@
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+.flex {
+  /* Establecer el contenedor principal como un contenedor flex */
+  display: flex;
+  justify-content: center;
+align-items: center;
+height: 100vh; 
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.contenedorlogin {
+  margin: auto;
+  margin-bottom: 150px;
+  padding: 40px ;
+  width: 150%;
+  background-color:rgb(198, 198, 228);
+  text-align: center;
+}
+
+form-container {
+  /* Ajustamos el tamaño de los campos de Email y Password */
+  width: 100%;
+  max-width: 400px; /* Ajusta este valor según sea necesario */
+  margin: 0 auto; /* Centra los campos horizontalmente */
+}
+
+.mat-form-field {
+  /* Eliminamos el color gris de fondo en los campos */
+  background-color: transparent;
+}
+
+.mad-card-title{
+  flex-direction: column;
+
+}
+
+
+
+
+.center {
+  /* Centrar horizontalmente los elementos secundarios */
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Opcional: Si deseas que el botón esté centrado verticalmente también */
+}

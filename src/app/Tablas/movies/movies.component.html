@@ -1,0 +1,27 @@
+<h1>Películas del Usuario</h1>
+
+<table mat-table [dataSource]="movies">
+  <!-- Columna: Poster de la película -->
+  <ng-container matColumnDef="poster_path">
+    <th mat-header-cell *matHeaderCellDef>Poster</th>
+    <td mat-cell *matCellDef="let movie">
+      <img [src]="movie.poster_path" alt="Poster de la película" />
+    </td>
+  </ng-container>
+
+  <!-- Columna: Título de la película -->
+  <ng-container matColumnDef="title">
+    <th mat-header-cell *matHeaderCellDef>Título</th>
+    <td mat-cell *matCellDef="let movie">{{ movie.title }}</td>
+  </ng-container>
+
+  <!-- Columna: Resumen de la película -->
+  <ng-container matColumnDef="overview">
+    <th mat-header-cell *matHeaderCellDef>Resumen</th>
+    <td mat-cell *matCellDef="let movie">{{ movie.overview }}</td>
+  </ng-container>
+
+  <!-- Define las columnas de la tabla -->
+  <tr mat-header-row *matHeaderRowDef="['poster_path', 'title', 'overview']"></tr>
+  <tr mat-row *matRowDef="let row; columns: ['poster_path', 'title', 'overview']"></tr>
+</table>

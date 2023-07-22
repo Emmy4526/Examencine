@@ -1,0 +1,66 @@
+
+
+  
+
+
+
+<!-- Botón para el perfil del usuario -->
+<button mat-icon-button aria-label="Perfil del Usuario" (click)="navigateToProfile()">
+  <mat-icon>menu</mat-icon>
+</button>
+
+<!-- Botón para los usuarios registrados -->
+<button mat-icon-button aria-label="Usuarios Registrados" (click)="navigateToUsers()">
+  <mat-icon>people</mat-icon>
+</button>
+
+<!-- Botón para las películas -->
+<button mat-icon-button aria-label="Películas" (click)="navigateToMovies()">
+  <mat-icon>movie</mat-icon>
+</button>
+
+<!-- Botón para cerrar sesión -->
+<button mat-icon-button aria-label="Cerrar Sesión" (click)="logout()">
+  <mat-icon>exit_to_app</mat-icon>
+</button>
+
+<!-- Menú (si aún lo necesitas para otro propósito) -->
+<mat-menu #menu="matMenu">
+  <button mat-menu-item (click)="navigateToProfile()">
+    <mat-icon>menu</mat-icon>
+    <span>Perfil del Usuario</span>
+  </button>
+  <button mat-menu-item (click)="navigateToUsers()">
+    <mat-icon>people</mat-icon>
+    <span>Usuarios Registrados</span>
+  </button>
+  <button mat-menu-item (click)="navigateToMovies()">
+    <mat-icon>movie</mat-icon>
+    <span>Películas</span>
+  </button>
+  <button mat-menu-item (click)="logout()">
+    <mat-icon>exit_to_app</mat-icon>
+    <span>Cerrar Sesión</span>
+  </button>
+</mat-menu> 
+
+
+<h1>Películas populares</h1>
+<mat-grid-list cols="4" rowHeight="500" gutterSize="16px" >
+  <mat-grid-tile *ngFor="let movie of movies.slice(pageIndex * pageSize, (pageIndex + 1) * pageSize)">
+    <mat-card class="example-card">
+ <small><img class="centered-image" mat-card-image [src]="movie.poster_path" alt="{{ movie.title }}"></small>    
+
+      <mat-card-content>
+        <p>{{ movie.title }}</p>
+        <p class="description">{{ movie.overview }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+
+
